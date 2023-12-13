@@ -18,8 +18,10 @@ aqua -i
 
 # Run Example
 
-```bash
-make run
+## Chat
 
-> Hello, World!!
+```bash
+cd ./chat
+go build -o chat
+./chat
 ```
