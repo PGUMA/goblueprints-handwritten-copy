@@ -19,7 +19,7 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.once.Do(func() {
 		t.templ = template.Must(template.ParseFiles(filepath.Join("templates", t.filename)))
 		// second value is data
-		t.templ.Execute(w, nil)
+		t.templ.Execute(w, r)
 	})
 }
 
