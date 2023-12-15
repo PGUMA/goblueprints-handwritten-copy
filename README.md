@@ -25,3 +25,12 @@ cd ./chat
 go build -o chat
 ./chat
 ```
+
+## trace test
+
+-cover=カバレッジの表示
+
+```bash
+cd ./trace
+go test -cover
+```
