@@ -4,12 +4,9 @@ import (
 	"flag"
 	"log"
 	"net/http"
-	"os"
 	"path/filepath"
 	"sync"
 	"text/template"
-
-	"github.com/PGUMA/go-project-template/trace"
 )
 
 type templateHandler struct {
@@ -33,7 +30,7 @@ func main() {
 	http.Handle("/", &templateHandler{filename: "chat.html"})
 
 	r := newRoom()
-	r.tracer = trace.New(os.Stdout)
+	//r.tracer = trace.New(os.Stdout)
 	http.Handle("/room", r)
 
 	go r.run()
